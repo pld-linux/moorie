@@ -3,7 +3,7 @@
 %define		subver	20100203
 %define		rel		0.1
 Summary:	HashCode Downloader
-Summary(pl.UTF-8):	 Moorie to natywny klient sieci p2m Moorhunt.
+Summary(pl.UTF-8):	Moorie to natywny klient sieci p2m Moorhunt.
 Name:		moorie
 Version:	0.1
 Release:	0.%{subver}.%{rel}
@@ -12,6 +12,7 @@ Group:		Applications
 Source0:	http://ppa.launchpad.net/moorie/ppa/ubuntu/pool/main/m/moorie/%{name}_git%{subver}-1.tar.gz
 # Source0-md5:	f23ec2b6afcd52f57bd1cb14c5fbdee1
 URL:		http://www.moorie.pl/
+BuildRequires:	QtCore-devel
 BuildRequires:	boost-devel
 BuildRequires:	cmake
 BuildRequires:	curl-devel
@@ -19,6 +20,7 @@ BuildRequires:	libmcrypt-devel
 BuildRequires:	mhash-devel
 BuildRequires:	openssl-devel
 BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 # src/libmoor/libmoorhunt.a contains ELF 32 object
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
